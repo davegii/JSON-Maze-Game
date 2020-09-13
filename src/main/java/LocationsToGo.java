@@ -2,11 +2,13 @@ import com.google.gson.annotations.Expose;
 import com.sun.deploy.util.StringUtils;
 
 import javax.xml.stream.Location;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class LocationsToGo {
     private List<Locations> locations;
+    private List<String> pickedUpItems = new ArrayList<>();
 
     public List<Locations> getLocations() {
         return locations;
@@ -51,6 +53,8 @@ public class LocationsToGo {
             runGame(location.getPlaceNum());
         } else if(firstWord.equals("go")){
             go(location, secondWord);
+        } else if(firstWord.equals("take")){
+            take(location, secondWord);
         }
 
     }
@@ -76,6 +80,37 @@ public class LocationsToGo {
         }else{
             runGame(newCurrentLocationNum);
         }
+    }
+
+    public void take(Locations location, String item){
+        String lowCaseItem = item.toLowerCase();
+        boolean itemExists = false;
+        String locationItem = "";
+        String[] tempItemArray = new String[location.getItems().length];
+        int indexWhereItemEqualsArray = 0;
+        for(int i =0; i< location.getItems().length; i++){
+            locationItem = location.getItems()[i];
+            if(lowCaseItem.equals(locationItem.toLowerCase())){
+                itemExists = true;
+                pickedUpItems.add(lowCaseItem);
+                indexWhereItemEqualsArray = i;
+                break;
+            }
+        }
+
+        if (!itemExists) {
+            System.out.println("There is no item \"" + item + "\" in the room");
+        }else{
+            for(int i = 0; i < tempItemArray.length;i++){
+                if(i!=indexWhereItemEqualsArray) {
+                    tempItemArray[i] = location.getItems()[i];
+                }else{
+                    tempItemArray[i]="";
+                }
+            }
+            location.setItems(tempItemArray);
+        }
+        runGame(location.getPlaceNum());
     }
 
 
