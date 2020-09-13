@@ -3,28 +3,28 @@
     "location": "Door Entrance",
     "description": "The main entrance to the building",
     "items": ["five bucks"],
-    "directionPlaces": ["The door"],
+    "directionDescriptions": ["The door"],
     "possibleDirections": ["North"]
     },
     {
       "location": "Main Room",
       "description": "The main room of the building",
       "items": ["hat"],
-      "directionPlaces": ["Reception Desk","Lobby","Rooms"],
+      "directionDescriptions": ["Reception Desk","Lobby","Rooms"],
       "possibleDirections": ["West","East","North"]
     },
     {
       "location": "Reception Desk",
       "description": "The leftmost area of the building",
       "items": ["Hotel Key"],
-      "directionPlaces": ["Main Room"],
+      "directionDescriptions": ["Main Room"],
       "possibleDirections": ["East"]
     },
     {
       "location": "Lobby Area",
       "description": "The rightmost area of the building",
       "items": ["Bags"],
-      "directionPlaces": ["Main Room"],
+      "directionDescriptions": ["Main Room"],
       "possibleDirections": ["West"]
     },
     {
