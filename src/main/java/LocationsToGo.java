@@ -44,10 +44,10 @@ public class LocationsToGo {
             firstWord = arr[0];
             secondWord = arr[1];
         }
-        System.out.println(firstWord);
-        System.out.println(secondWord);
         //compares
-        if (firstWord.equals("examine")) {
+        if(firstWord.equals("quit")||firstWord.equals("exit")){
+            System.out.println("Goodbye!");
+        } else if (firstWord.equals("examine")) {
             runGame(location.getPlaceNum());
         } else if(firstWord.equals("go")){
             go(location, secondWord);
@@ -67,8 +67,12 @@ public class LocationsToGo {
                 break;
             }
         }
-        if(!newLocationExists){
-            System.out.println("That location does not exist");
+        if(newCurrentLocationNum == 4){
+            examine(locations.get(newCurrentLocationNum));
+            System.out.println("YOU WON!");
+        } else if(!newLocationExists){
+            System.out.println("I can't go \""+direction+"\"");
+            runGame(location.getPlaceNum());
         }else{
             runGame(newCurrentLocationNum);
         }
