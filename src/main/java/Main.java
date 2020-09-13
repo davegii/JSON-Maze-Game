@@ -12,7 +12,7 @@ public class Main {
         String myJson = "src/main/java/student/adventure/adventure.json";
         Reader reader = Files.newBufferedReader(Paths.get(myJson));
         LocationsToGo map = gson.fromJson(reader, LocationsToGo.class);
-        System.out.println(map.getLocations().get(1).getLocation());
+        map.examine(map.getLocations().get(1));
 
     }
 }
