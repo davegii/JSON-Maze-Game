@@ -1,51 +1,51 @@
 {
   "locations": [{
-    "placeNum": 1,
+    "placeNum": 0,
     "location": "Door Entrance",
     "description": "The main entrance to the building",
     "items": ["five bucks"],
     "directionDescriptions": ["The door"],
     "possibleDirections": [{
       "direction": "North",
-      "placeNum": 2}]
+      "placeNum": 1}]
     },
     {
-      "placeNum": 2,
+      "placeNum": 1,
       "location": "Main Room",
       "description": "The main room of the building",
       "items": ["hat"],
       "directionDescriptions": ["Reception Desk","Lobby","Rooms"],
       "possibleDirections": [{
         "direction": "West",
-        "placeNum":  3},{
+        "placeNum":  2},{
         "direction": "East",
-        "placeNum": 4
+        "placeNum": 3
         },
         {"direction": "North",
-          "placeNum":  5
+          "placeNum":  4
         }]
     },
     {
-      "placeNum": 3,
+      "placeNum": 2,
       "location": "Reception Desk",
       "description": "The leftmost area of the building",
       "items": ["Hotel Key"],
       "directionDescriptions": ["Main Room"],
       "possibleDirections": [{"direction": "East",
-        "placeNum":  2
+        "placeNum":  1
       }]
     },
     {
-      "placeNum": 4,
+      "placeNum": 3,
       "location": "Lobby Area",
       "description": "The rightmost area of the building",
       "items": ["Bags"],
       "directionDescriptions": ["Main Room"],
       "possibleDirections": [{"direction": "West",
-        "placeNum":  2
+        "placeNum":  1
       }]
     },
-    { "placeNum": 5,
+    { "placeNum": 4,
       "location": "Rooms",
       "description": "You've made it to your room!"
     }

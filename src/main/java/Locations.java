@@ -13,7 +13,9 @@ public class Locations {
         return possibleDirections;
     }
 
-
+    public int getPlaceNum() {
+        return placeNum;
+    }
 
     public String getLocation() {
         return location;
