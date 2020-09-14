@@ -1,4 +1,7 @@
+
+
 import com.google.gson.Gson;
+import student.adventure.LocationsToGo;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -12,7 +15,7 @@ public class Main {
         String myJson = "src/main/java/student/adventure/adventure.json";
         Reader reader = Files.newBufferedReader(Paths.get(myJson));
         LocationsToGo map = gson.fromJson(reader, LocationsToGo.class);
-        map.runGame(0);
+        map.runGame(0,false);
 
     }
 }

@@ -1,3 +1,5 @@
+package student.adventure;
+
 public class PossibleDirections {
     public String getDirection() {
         return direction;

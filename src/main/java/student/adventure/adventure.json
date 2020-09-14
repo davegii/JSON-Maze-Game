@@ -13,7 +13,7 @@
       "placeNum": 1,
       "location": "Main Room",
       "description": "The main room of the building",
-      "items": ["hat"],
+      "items": ["hat", "five bucks"],
       "directionDescriptions": ["Reception Desk","Lobby","Rooms"],
       "possibleDirections": [{
         "direction": "West",
